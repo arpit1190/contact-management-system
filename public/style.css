@@ -1,0 +1,87 @@
+body {
+  font-family: 'Orbitron', sans-serif;
+  background-color: #4e342e; /* Soil tone */
+  margin: 0;
+  padding: 30px 20px;
+  color: #f5f5f5;
+}
+
+h1 {
+  text-align: center;
+  font-size: 2.5rem;
+  color: #ffcc80;
+  animation: glow 1.5s ease-in-out infinite alternate;
+  letter-spacing: 3px;
+  margin-bottom: 40px;
+}
+
+@keyframes glow {
+  from {
+    text-shadow: 0 0 10px #ffb300, 0 0 20px #ffb300, 0 0 30px #ffb300;
+  }
+  to {
+    text-shadow: 0 0 20px #ffe082, 0 0 30px #ffe082, 0 0 40px #ffe082;
+  }
+}
+
+.buttons {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+button {
+  background-color: #6d4c41;
+  color: #fff8e1;
+  padding: 12px 24px;
+  font-size: 16px;
+  border: 1px solid #8d6e63;
+  border-radius: 6px;
+  margin: 5px;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(255, 204, 128, 0.4);
+  transition: all 0.3s ease;
+}
+
+button:hover {
+  background-color: #8d6e63;
+  transform: scale(1.05);
+}
+
+#form-section, #output {
+  max-width: 700px;
+  margin: 0 auto;
+  background-color: #3e2723;
+  padding: 25px;
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(255, 204, 128, 0.2);
+  margin-top: 20px;
+  color: #fffde7;
+}
+
+input[type="text"], input[type="email"] {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 15px;
+  border: none;
+  border-radius: 5px;
+  font-size: 15px;
+  background-color: #5d4037;
+  color: #fff;
+}
+
+input::placeholder {
+  color: #ddd;
+}
+
+hr {
+  border: none;
+  height: 1px;
+  background: #8d6e63;
+  margin: 20px 0;
+}
+
+p {
+  font-size: 16px;
+  line-height: 1.6;
+  color: #ffe0b2;
+}
