@@ -1,21 +1,78 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
-  <title>Contact Manager</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nexus Contact Manager</title>
+
+  <!-- Modern Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&display=swap" rel="stylesheet">
+
+  <!-- CSS -->
   <link rel="stylesheet" href="style.css">
-  <link href="https://fonts.googleapis.com/css2?family=Orbitron&display=swap" rel="stylesheet">
+
+  <!-- Vis.js for Network/Tree visualization -->
+  <script type="text/javascript" src="https://unpkg.com/vis-network/standalone/umd/vis-network.min.js"></script>
 </head>
+
 <body>
-  <h1>Welcome to Contact Management System</h1>
-  <div class="buttons">
-    <button onclick="showAdd()">Add</button>
-    <button onclick="showDelete()">Delete</button>
-    <button onclick="showSearch()">Search</button>
-    <button onclick="displayContacts()">Display</button>
+  <!-- Toast Notification Container -->
+  <div id="toast-container" class="toast-container"></div>
+
+  <div class="app-container">
+    <header class="hero">
+      <h1><span class="gradient-text">Contact Management System</span></h1>
+      <p class="subtitle">Advanced Data Structure Management</p>
+    </header>
+
+    <main>
+      <div class="controls glass-panel">
+        <button onclick="showAdd()">
+          <span class="btn-icon">＋</span> Add Contact
+        </button>
+        <button onclick="showSearch()">
+          <span class="btn-icon">🔍</span> Search
+        </button>
+        <button onclick="showDelete()">
+          <span class="btn-icon">🗑️</span> Delete
+        </button>
+        <button onclick="displayContacts()">
+          <span class="btn-icon">📋</span> Display All
+        </button>
+        <button onclick="showSort()">
+          <span class="btn-icon">⚡</span> Sort Engine
+        </button>
+      </div>
+
+      <div class="content-wrapper">
+        <div id="form-section" class="form-container glass-panel" style="display: none;"></div>
+        <div id="output" class="output-container glass-panel" style="display: none;"></div>
+      </div>
+
+      <!-- Visualization Section -->
+      <div id="visualization-section" class="visualization-panel glass-panel" style="display:none;">
+        <h2>Algorithm <span class="gradient-text">Visualizer</span></h2>
+
+        <div class="terminal-wrapper">
+          <div class="terminal-header">
+            <span class="dot red"></span>
+            <span class="dot yellow"></span>
+            <span class="dot green"></span>
+            <span class="terminal-title">nexus-engine ~ bash</span>
+          </div>
+          <div id="log-output" class="terminal-body"></div>
+        </div>
+
+        <div id="tree-network" class="network-view" style="display:none;"></div>
+        <div id="array-visualizer" class="array-view" style="display:none;"></div>
+      </div>
+    </main>
   </div>
-  <div id="form-section"></div>
-  <div id="output"></div>
+
   <script src="script.js"></script>
 </body>
+
 </html>
